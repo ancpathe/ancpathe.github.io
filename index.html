@@ -84,6 +84,8 @@
                 width: 100%;
                 margin-bottom: 35px;
             }
+            h2{font-size: 20px;}
+            .mycss-container-margin {padding: 40px 30px;}  
         }
         @media screen and (max-width: 480px) {
         .logo {
@@ -192,7 +194,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
     <!-- BEGIN: Actual animated container. -->
     <div class="animated-container">
         <div class="messaging">
-            <div class="loader" style="margin: 0 auto;width: 100px; "></div>
+            <div class="loader" style="margin: 0 auto;width: 100px; height: 600px;"></div>
         </div>
     </div>
     <!-- END: Actual animated container. -->
@@ -285,42 +287,25 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
 <!-- About Us -->
 <div id="container-about" class="container-fluid mycss-container-margin">
     <div class="row">
-        <div class="col-sm-8">
-            <h2>MELAKA MANIPAL MEDICAL COLLEGE - MANIPAL UNIVERSITY</h2><br>
-            <h4>The Melaka Manipal Medical College(MMMC) is a renowned private medical institution with a hallmark of academic excellence and an enviable track record in providing quality medical education.</h4><br>
+        <div class="col-sm-6">
+            <h2>MELAKA MANIPAL MEDICAL COLLEGE - MANIPAL UNIVERSITY</h2>
+            <h4>The Melaka Manipal Medical College(MMMC) is a renowned private medical institution with a hallmark of academic excellence and an enviable track record in providing quality medical education.</h4>
             <p>MMMC’s medicine course provides you with a comprehensive understanding of the practice of medicine. There is an emphasis on the early development of clinical, communication and procedural skills, diagnosis and management of chronic diseases, and multidisciplinary teamwork, as well as an emphasis on rural and regional medicine.</p>
-            <br><a role="button" data-toggle="modal" data-target="#modalSubmit" class="btn btn-default btn-lg">For More Information</a>
+            <br><a role="button" data-toggle="modal" data-target="#modalSubmit" class="btn btn-warning btn-lg" >For More Information</a>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div  class="embed-responsive embed-responsive-16by9">
                 <iframe style="padding-top: 20px;" src="https://www.youtube.com/embed/VmqA5QkAIEw?rel=0&autoplay=1&showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
             </div> 
         </div>
     </div>
 </div>
-
-<!-- Our Values -->    
-<div class="container-fluid mycss-container-margin bg-grey">
-    <div class="row">
-        <div class="col-sm-4">
-            <span class="glyphicon glyphicon-globe logo slideanim"></span>
-            </div>
-        <div class="col-sm-8">
-            <h2>Our Values</h2><br>
-            <h4><strong>MISSION (Faculty of Medicine):</strong> To prepare our students for the humanitarian and altruistic practice of medicine and life long learning while aspiring to promote excellence in health care through research and post graduate training.</h4><br>
-            <h4><strong>MISSION (Faculty of Dentistry):</strong> Provide value based dental education and comprehensive oral health care at par with International Standards in a condusive environment utilizing state of the art technology to ensure satisfaction of students, patients and staff. Striving to continually improve dental education, patient care, research, infrastructure and human resources to set a benchmark at national as well as international levels.</h4><br>
-            <p><strong>VISION:</strong> A world class educational centre in a multicultural environment.</p>
-        </div>
-    </div>
-</div>
-    
-
     
     
 <!-- Testimonials -->    
 <div class="container-fluid">
     <br><br>
-    <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+    <div id="custom_carousel" class="carousel slide bg-grey" data-ride="carousel" data-interval="4000">
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
@@ -330,7 +315,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
                         <div class="col-md-9">
                             <h2>Shenali Kumarsairi</h2>
                             <p>Musaeus College – Mathematics World Prize, 2016. Medicine is the only profession that allows me to simultaneously help people while pushing my mental limits. It tests the limits of human compassion, memory, physical stamina, and resilience. And it is a nod back to the exact feelings I had as that five year old kid who wanted to become a doctor.Thanks to ANC-PATHE, I opened my eyes to choices I have out there to obtain a degree in medicine.<p>
-                            <a role="button" data-toggle="modal" data-target="#modalStudent1" class="btn btn-default btn-lg">View More</a>
+                            <a role="button" data-toggle="modal" data-target="#modalStudent1" class="btn btn-warning btn-lg">View More</a>
                         </div>
                     </div>
                 </div>            
@@ -344,7 +329,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
                             <p>Medicine is the only profession that allows me to simultaneously help people while pushing my mental limits. It tests the limits of human compassion, memory, physical stamina, and resilience. And it is a nod back to the exact feelings I had as that five year old kid who wanted to become a doctor.<p> 
                                 
                
-                            <a role="button" data-toggle="modal" data-target="#modalStudent2" class="btn btn-default btn-lg">View More</a>
+                            <a role="button" data-toggle="modal" data-target="#modalStudent2" class="btn btn-warning btn-lg">View More</a>
                         </div>
                     </div>
                 </div>            
@@ -358,7 +343,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
                             <p>WHAT IS THE SIGNIFICANT FACTOR THAT MADE ANC Future Center - Medical Placments Divison A PLEASANT EXPERIENCE?
                                ANC Future Center - Medical Placments Divison made the long journey to enrol for medicine agreeable by being efficient at getting the needful done promptly. Everyone is so very kind and patient. I had a lot of questions!! and each was answered with kindness and genuine interest.<p>
     
-                               <a role="button" data-toggle="modal" data-target="#modalStudent3" class="btn btn-default btn-lg">View More</a>
+                               <a role="button" data-toggle="modal" data-target="#modalStudent3" class="btn btn-warning btn-lg">View More</a>
                         </div>
                     </div>
                 </div>           
@@ -371,7 +356,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
                             <h2>Vedushan Kanagarajah</h2>
                             <p>I stared down at the sheet I held. It had my name and the grades followed. Not what I had hoped for but something I thought I could exploit. My passion for a career was split and I was led into a dilemma. Do I try to pursue law or step into the medical field? I always knew medicine would be a challenge, a challenge I wanted to conquer. Thus started my journey towards choosing a competent university and acquiring admission</p> 
                             
-                            <a role="button" data-toggle="modal" data-target="#modalStudent4" class="btn btn-default btn-lg">View More</a>
+                            <a role="button" data-toggle="modal" data-target="#modalStudent4" class="btn btn-warning btn-lg">View More</a>
 
                         </div>
                     </div>
@@ -382,34 +367,32 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
         <!-- End Carousel Inner -->
     </div>
     <!-- End Carousel -->
-</div>    
-    
-    
-<!-- Student Summary -->
-<div id="portfolio" class="container-fluid  text-center slideanim bg-grey"> 
-  
-    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active"> 
-                <h4>"I had a lot of questions!! and each was answered with kindness and genuine interest..."<br><span>-: Vedushan Kanagarajah</span></h4>
-            </div>
-            <div class="item">
-                <h4>"I understood that continuing my education in a foreign nation would be the more viable alternative..."<br><span>-: Shafiya Nawaz</span></h4>
-            </div>
-            <div class="item">
-                <h4>"They told me everything that I needed to know..."<br><span>-: Shenali Kumarsairi</span></h4>
-            </div>
+    <!-- Student Summary -->
+    <div id="portfolio" class="container-fluid  text-center slideanim bg-grey"> 
 
-            <div class="item"> 
-                <h4>"I greatly appreciate their effort and wish to thank them for all the assistance..."<br><span>-: Vedushan Kanagarajah</span></h4>
-            </div>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active"> 
+                    <h4>"I had a lot of questions!! and each was answered with kindness and genuine interest..."<br><span>-: Vedushan Kanagarajah</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"I understood that continuing my education in a foreign nation would be the more viable alternative..."<br><span>-: Shafiya Nawaz</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"They told me everything that I needed to know..."<br><span>-: Shenali Kumarsairi</span></h4>
+                </div>
 
-            <div class="item">
-                <h4>"Impeccable support during the university application process and the visa process..."<br><span>-: Shenali Kumarsairi</span></h4>
+                <div class="item"> 
+                    <h4>"I greatly appreciate their effort and wish to thank them for all the assistance..."<br><span>-: Vedushan Kanagarajah</span></h4>
+                </div>
+
+                <div class="item">
+                    <h4>"Impeccable support during the university application process and the visa process..."<br><span>-: Shenali Kumarsairi</span></h4>
+                </div>
             </div>
         </div>
-    </div>
+    </div> 
 </div>    
     
     
