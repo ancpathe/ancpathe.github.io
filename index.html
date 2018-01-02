@@ -62,6 +62,26 @@
 
         .slideanim {visibility:hidden;}
         .slide {animation-name: slide;-webkit-animation-name: slide;animation-duration: 1s;-webkit-animation-duration: 1s;visibility: visible;}
+        
+        
+        #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+        
+        
         @keyframes slide {
             0% {
                 opacity: 0;
@@ -195,6 +215,11 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
+    
+    
+    
+    
+    
 </style>
 
 
@@ -240,7 +265,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
 </nav>
 
 <!-- Carousel Main -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 50px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -292,7 +317,8 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
 </div>
 
 <!-- About Us -->
-<div id="container-about" class="container-fluid mycss-container-margin ">
+<div id="container-about"></div>    
+<div  class="container-fluid mycss-container-margin ">
     <div class="row">
         <div class="col-sm-6">
             <h2>MELAKA MANIPAL MEDICAL COLLEGE - MANIPAL UNIVERSITY</h2>
@@ -404,7 +430,8 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
     
     
 <!-- Our Services -->
-<div id="container-services" class="container-fluid mycss-container-margin text-center">
+<div id="container-services" ></div>    
+<div class="container-fluid mycss-container-margin text-center">
     <h2>OUR SERVICES</h2>
     <br>
     <div class="row slideanim">
@@ -479,7 +506,8 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
 
 
 <!-- Find Us -->
-<div id="container-findus" class="container-fluid bg-grey">
+<div id="container-findus"></div>      
+<div  class="container-fluid bg-grey">
     <br><br>
     <h2 class="text-center">Try to Find Us!</h2>
     <div class="row">
