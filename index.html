@@ -219,44 +219,41 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
     }
     
     
-    #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ffffff;
-        z-index: 10001;
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #00aced;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
     }
 
-    #loading-animation {
-        width: 120px;
-        height: 128px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        background-image:url(img/Gif/loading-animation.GIF); 
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: -60px 0 0 -64px;
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
     }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    
+    
 </style>
 
 
     <!-- BEGIN: Actual animated container. -->
     <div class="animated-container">
         <div class="messaging">
-            <!-- Preloader -->
-                <div id="preloader">
-                    <div id="loading-animation">&nbsp;</div>
-                </div>
-            <!-- /Preloader -->
+            <div class="loader" style="margin: 0 auto;width: 100px; height: 600px;"></div>
         </div>
     </div>
     <!-- END: Actual animated container. -->
 </div>
 <!-- END: App-Loading Screen. -->    
-    
     
     
     
