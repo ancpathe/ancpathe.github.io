@@ -1,0 +1,173 @@
+/* ==================== CSS Structure ==================== 
+
+	 * 1.0 MULTISTEP FORM	
+	 * 2.0 FOOTER
+     * 3.0 PRELOADER 
+  
+========================================================== */
+
+
+
+/* ==================== 1.0 MULTISTEP FORM ==================== */
+
+* {
+  box-sizing: border-box;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 50px auto;
+  font-family: Raleway;
+  padding: 40px;
+
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;  
+  padding: 5px 10px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+
+/* ==================== 2.0 FOOTER ==================== */
+
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+    
+/*-- FOOTER INFO --*/
+
+footer{
+    background-color: #2B2B2B;
+    width: 100%;
+}
+
+.social{
+    list-style-type: none;
+    text-align: center;
+}
+
+.social li{
+    display: inline;
+}
+
+.social i{
+    font-size: 460%;
+    margin: 1%;
+    padding: 5% 5% 5% 4%;
+    color: #F5F5F5;
+}
+
+.social i:hover{
+    color: #67BCDB;
+}
+/*-- FOOTER INFO --*/
+
+/*-- FOOTER COPYRIGHT --*/
+
+footer.second{
+    border-top:  3px solid #F5F5F5;
+    background-color: #2B2B2B;
+    max-height: 55px;
+    margin:0;
+}
+
+footer.second p{
+    
+    text-align: center;
+}
+/*-- FOOTER COPYRIGHT --*/
+
+
+
+@media screen and (max-width:900px){
+
+   .social i{
+        font-size: 180%;
+    }
+
+}
+
+
+/* ==================== 3.0 PRELOADER ==================== */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 10001;
+}
+
+#loading-animation {
+    width: 120px;
+    height: 128px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image:url(../../img/Gif/loading-animation.GIF); 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -60px 0 0 -64px;
+}

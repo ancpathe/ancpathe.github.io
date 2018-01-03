@@ -5,18 +5,22 @@
     <title>ANC | Doctor Dream</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
+    
+    <!-- Global use -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
-    <!-- Multi step form -->
-    <link rel="stylesheet" href="css/home/multiStepForm.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <!-- Footer -->
-    <link rel="stylesheet" href="css/home/footer.css">     
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/home/style.css"> 
     <style>
         *{font-family: Raleway;}
         body {font: 400 15px Lato, sans-serif;line-height: 1.8;color: #2B2B2B;} 
@@ -25,6 +29,25 @@
         
         .mycss-container-margin {padding: 20px 10px;}    
         .mycss-content-justify {text-align:justify; text-justify:inter-word;}
+        
+        #myBtnGoUpTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        #myBtnGoUpTop:hover {
+            background-color: #555;
+        }
          
         .bg-grey {background-color: #f6f6f6;}
         
@@ -123,7 +146,7 @@
 <!-- Body -->    
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="AppController">
 
-    
+<button onclick="topFunction()" id="myBtnGoUpTop" title="Go to top">Top</button>   
     
     
 <!--
@@ -195,38 +218,39 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
         margin: 0px 0px 0px 0px ;
     }
     
-    .loader {
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #00aced;
+    
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        z-index: 10001;
+    }
+
+    #loading-animation {
         width: 120px;
-        height: 120px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
-        animation: spin 2s linear infinite;
+        height: 128px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-image:url(img/Gif/loading-animation.GIF); 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: -60px 0 0 -64px;
     }
-
-    /* Safari */
-    @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    
-    
-    
-    
-    
 </style>
 
 
     <!-- BEGIN: Actual animated container. -->
     <div class="animated-container">
         <div class="messaging">
-            <div class="loader" style="margin: 0 auto;width: 100px; height: 600px;"></div>
+            <!-- Preloader -->
+                <div id="preloader">
+                    <div id="loading-animation">&nbsp;</div>
+                </div>
+            <!-- /Preloader -->
         </div>
     </div>
     <!-- END: Actual animated container. -->
@@ -926,6 +950,27 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class on the current step:
   x[n].className += " active";
+}
+</script>  
+    
+    
+    
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtnGoUpTop").style.display = "block";
+    } else {
+        document.getElementById("myBtnGoUpTop").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 </script>    
 
