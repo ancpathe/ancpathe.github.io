@@ -8,7 +8,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     
 // Read More | Read Less  
 $(".readmore").on('click touchstart', function(event) {
-        var txt = $(".more-content").is(':visible') ? 'Show more' : 'Show less <span class="glyphicon glyphicon-menu-up"></span>';
+        var txt = $(".more-content").is(':visible') ? 'Show more' : 'Show less';
         $(this).parent().prev(".more-content").toggleClass("cg-visible");
         $(this).html(txt);
         event.preventDefault();
