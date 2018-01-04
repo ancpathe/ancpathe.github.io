@@ -740,8 +740,11 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
         </div>
     </div>  
 </div>  
+<script type="text/javascript" src="angularJS/angular-1.3.8.min.js"></script>
+<script type="text/javascript" src="angularJS/angular-animate-1.3.8.min.js"></script>    
     
 <script>
+    
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
@@ -758,16 +761,15 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-</script>       
+       
         
     
       
 <!-- Load scripts. -->
-    <script type="text/javascript" src="angularJS/angular-1.3.8.min.js"></script>
-    <script type="text/javascript" src="angularJS/angular-animate-1.3.8.min.js"></script>
     
     
-    <script type="text/javascript">
+    
+    
         // Loader  
         // Create an application module for our demo.
         var app = angular.module( "Demo", [ "ngAnimate" ] );
@@ -829,7 +831,7 @@ function topFunction() {
                 }
             }
         );
-    </script>    
+
     
     
 
@@ -838,8 +840,7 @@ function topFunction() {
     
     
     
-    
-<script>
+
     
     
 $(document).on('click','.navbar-collapse.in',function(e) {
@@ -892,9 +893,9 @@ $(document).ready(function(){
         });
     });
 }) 
-</script>
+
     
-<script>
+
 //Multistep form    
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
