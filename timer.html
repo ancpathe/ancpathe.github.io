@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'
+  src='jqry.js'></script>
+<script type='text/javascript'
+  src="flipclock.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="flipclock.css">
+<script type='text/javascript'>
+$(window).load(function(){
+$(document).ready(function(){
+    var date = new Date(2018, 1, 7, 0,0,0,0);
+    var today = new Date();
+    var dif = date.getTime() - today.getTime();
+    var timeLeft = Math.abs(dif/100)/60;
+    var clock = $('.clock').FlipClock({
+        autoStart: false,
+        clockFace: 'DailyCounter',
+        countdown: true
+    });
+    clock.setTime(timeLeft);
+    clock.start();   
+});
+});
+</script>
+</head>
+<body>
+  <div class="clock"></div>
+</body>
+</html>
