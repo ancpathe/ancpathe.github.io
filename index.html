@@ -1,16 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>ANC | Doctor Dream</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
+    
+    <!-- Global use -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flipclock.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/home/style.css"> 
+  
+    
+    
+    <style>
+        *{font-family: Raleway;}
+        body {font: 400 15px Lato, sans-serif;line-height: 1.8;color: #2B2B2B;} 
+        h2 {font-size: 24px;text-transform: uppercase;color: #2B2B2B;font-weight: 600;margin-bottom: 30px;}
+        h4 {font-size: 19px;line-height: 1.375em;color: #2B2B2B;font-weight: 400;margin-bottom: 30px;}  
+        
+        .mycss-container-margin {padding: 5px 10px;}    
+        .mycss-content-justify {text-align:justify; text-justify:inter-word;}
+        
+        #myBtnGoUpTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #00aced;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+        }
 
+        #myBtnGoUpTop:hover {
+            background-color: #555;
+        }
+         
+        .bg-grey {background-color: #f6f6f6;}
+        
+        .logo-small {color: #00aced;font-size: 50px;}
+        .logo {color: #00aced;font-size: 200px;}
+        
+        .thumbnail {padding: 0 0 15px 0;border: none;border-radius: 0;}
+        .thumbnail img {width: 100%;height: 100%;margin-bottom: 10px;}
+        
+        .carousel-control.right, .carousel-control.left {background-image: none;color: #2B2B2B;}
+        .carousel-indicators li {border-color: #2B2B2B;}
+        .carousel-indicators li.active {background-color: #2B2B2B;}
+        
+        .item h4 {font-size: 19px;line-height: 1.375em;font-weight: 400;font-style: italic;margin: 70px 0;}
+        .item span {font-style: normal;}
+        
+        .panel {border: 1px solid #2B2B2B; border-radius:0 !important;transition: box-shadow 0.5s;}
+        .panel:hover {box-shadow: 5px 0px 40px rgba(0,0,0, .2);}
+        .panel-footer .btn:hover {border: 1px solid #2B2B2B;background-color: #fff !important;color: #2B2B2B;}
+        .panel-heading {
+            color: #fff !important;
+            background-color: #2B2B2B !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .panel-footer {background-color: white !important;}
+        .panel-footer h3 {font-size: 32px}
+        .panel-footer h4 {color: #2B2B2B;font-size: 14px;}
+        .panel-footer .btn {margin: 15px 0;background-color: #2B2B2B;color: #2B2B2B;}
+        
+
+        .slideanim {visibility:hidden;}
+        .slide {animation-name: slide;-webkit-animation-name: slide;animation-duration: 1s;-webkit-animation-duration: 1s;visibility: visible;}
+        
+        
+        #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+        
+        
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            } 
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            } 
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            h2{font-size: 20px;}
+            .mycss-container-margin {padding: 5px 10px;}  
+        }
+        @media screen and (max-width: 480px) {
+        .logo {
+            font-size: 150px;
+        }
+            
+            p{
+                font-size: 14px; 
+            }    
+    </style>
+    
+    
+    <script type='text/javascript'
+  src='js/timer.js'></script>
+<script type='text/javascript'
+  src="js/flipclock.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="css/flipclock.css">
+<script type='text/javascript'>
+$(window).load(function(){
+$(document).ready(function(){
+    var date = new Date(2018, 1, 7, 0,0,0,0);
+    var today = new Date();
+    var dif = date.getTime() - today.getTime();
+    var timeLeft = Math.abs(dif/100)/60;
+    var clock = $('.clock').FlipClock({
+        autoStart: false,
+        clockFace: 'DailyCounter',
+        countdown: true
+    });
+    clock.setTime(timeLeft);
+    clock.start();   
+});
+});
+</script>
+    
+    
 </head>
-<body>
+<!-- Body -->    
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="AppController">
 
-    <h1>University link</h1>
-    <a href="university/index.html">University page</a>
+<button onclick="topFunction()" id="myBtnGoUpTop" title="Go to top">Top</button>   
     
     
-    <h1>Event link</h1>
-    <a href="event/index.html">Event page</a>
+<!--
+BEGIN: App-Loading Screen.
+--
+Until the AngularJS application code is loaded and bootstrapped, this is just
+"static HTML." Meaning, the [class-based] directive, "mAppLoading", won't
+actually do anything until the application is initialized. As such, we'll give
+it just enough CSS to "fail open"; then, when the AngularJS app loads, the
+directive will run and we'll remove this loading screen.
+NOTES ON ANIMATION:
+When the AngularJS application is loaded and starts bootstrapping, all
+animations are disabled until all the routing information and templating
+information is loaded AND at least two digests have run (in order to prevent
+a flurry of animation activity). As such, we can't animate the root of the
+directive. Instead, we have to add "ngAnimateChildren" to the root element
+and then animate the inner container. The "ngAnimateChildren" directive allows
+us to override the animation-blocking within the bounds of our directive, which
+is fine since it only runs once.
+-->
+<div class="m-app-loading" ng-animate-children>
+
+<!--
+HACKY CODE WARNING: I'm putting Style block inside directive so that it
+            will be removed from the DOM when we remove the directive container.
+-->
+<style type="text/css">
+    div.m-app-loading {
+        position: fixed ;
+    }
+    div.m-app-loading div.animated-container {
+        background-color: #F5F5F5 ;
+        bottom: 0px ;
+        left: 0px ;
+
+        position: fixed ;
+        right: 0px ;
+        top: 0px ;
+        z-index: 999999 ;
+    }
+    /* Used to initialize the ng-leave animation state. */
+    div.m-app-loading div.animated-container.ng-leave {
+        opacity: 1.0 ;
+        transition: all linear 200ms ;
+        -webkit-transition: all linear 200ms ;
+    }
+    /* Used to set the end properties of the ng-leave animation state. */
+    div.m-app-loading div.animated-container.ng-leave-active {
+        opacity: 0 ;
+    }
+    div.m-app-loading div.messaging {
+        color: #FFFFFF ;
+        font-family: monospace ;
+        left: 0px ;
+        margin-top: -37px ;
+        position: absolute ;
+        right: 0px ;
+        text-align: center ;
+        top: 50% ;
+    }
+    div.m-app-loading h1 {
+        font-size: 26px ;
+        line-height: 35px ;
+        margin: 0px 0px 20px 0px ;
+    }
+    div.m-app-loading p {
+        font-size: 18px ;
+        line-height: 14px ;
+        margin: 0px 0px 0px 0px ;
+    }
+    
+    
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #00aced;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    
+    
+</style>
+
+
+    <!-- BEGIN: Actual animated container. -->
+    <div class="animated-container">
+        <div class="messaging">
+            <div class="loader" style="margin: 0 auto;width: 100px; height: 600px;"></div>
+        </div>
+    </div>
+    <!-- END: Actual animated container. -->
+</div>
+<!-- END: App-Loading Screen. -->    
+    
+
+    
+    
+    
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">ANC Future Center</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#myCarousel"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="#container-about">About Us</a></li>
+                    <li><a data-toggle="modal" data-target="#modalSubmit" role="button">Apply Now</a></li>
+                    <li><a href="#container-services">Our Services</a></li>
+                    <li><a href="#container-findus">Find Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    
+    
+    
+    
+
+<!-- Carousel Main -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 40px;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="img/banner1.jpg" style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="img/banner2.jpg"  style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="img/banner3.jpg"  style="width:100%;">
+        </div>
+        <div class="item">
+            <img src="img/banner4.jpg"  style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="img/banner5.jpg"  style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="img/banner6.jpg"  style="width:100%;">
+        </div>
+        
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- About Us -->
+<div id="container-about"></div>    
+<div  class="container-fluid mycss-container-margin ">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2 style="padding: 0px 15px;">MELAKA MANIPAL MEDICAL COLLEGE - MANIPAL UNIVERSITY</h2>
+            <p class="mycss-content-justify" style="padding: 1px 15px;">MMMC’s medicine course provides you with a comprehensive understanding of the practice of medicine. There is an emphasis on the early development of clinical, communication and procedural skills, diagnosis and management of chronic diseases, and multidisciplinary teamwork, as well as an emphasis on rural and regional medicine.</p>
+            <a role="button" data-toggle="modal" data-target="#modalSubmit" class="btn btn-warning btn-lg" style="width: 100%;">For More Information</a>
+        </div>
+        <div class="col-sm-6">
+            <div  class="embed-responsive embed-responsive-16by9">
+                <iframe style="padding-top: 20px;" src="https://www.youtube.com/embed/VmqA5QkAIEw?rel=0&autoplay=1&showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div> 
+        </div>
+    </div>
+</div>
+    
+    
+<!-- Testimonials -->    
+<div class="container-fluid">
+    <br><br>
+    <div id="custom_carousel" class="carousel slide bg-grey" data-ride="carousel" data-interval="10000" >
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" >
+            <div class="item active">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="img/Students/350x250-01.png" class="img-responsive" style="padding-top: 25px;"></div>
+                        <div class="col-md-9">
+                            <h2>Shenali Kumarsairi</h2>
+                            <p class="mycss-content-justify">Musaeus College – Mathematics World Prize, 2016. Medicine is the only profession that allows me to simultaneously help people while pushing my mental limits. It tests the limits of human compassion, memory, physical stamina, and resilience. And it is a nod back to the exact feelings I had as that five year old kid who wanted to become a doctor.Thanks to ANC-PATHE, I opened my eyes to choices I have out there to obtain a degree in medicine.<p>
+                            <a role="button" data-toggle="modal" data-target="#modalStudent1" class="btn btn-warning btn-lg">View More</a>
+                        </div>
+                    </div>
+                </div>            
+            </div> 
+            <div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="img/Students/350x250-03.png" class="img-responsive" style="padding-top: 25px;"></div>
+                        <div class="col-md-9">
+                            <h2>Methni Kularatne</h2>
+                            <p class="mycss-content-justify">Medicine is the only profession that allows me to simultaneously help people while pushing my mental limits. It tests the limits of human compassion, memory, physical stamina, and resilience. And it is a nod back to the exact feelings I had as that five year old kid who wanted to become a doctor.<p> 
+                                
+               
+                            <a role="button" data-toggle="modal" data-target="#modalStudent2" class="btn btn-warning btn-lg">View More</a>
+                        </div>
+                    </div>
+                </div>            
+            </div> 
+            <div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="img/Students/350x250-05.png" class="img-responsive" style="padding-top: 25px;"></div>
+                        <div class="col-md-9">
+                            <h2>Shafiya Nawaz</h2>
+                            <p class="mycss-content-justify">WHAT IS THE SIGNIFICANT FACTOR THAT MADE ANC Future Center - Medical Placments Divison A PLEASANT EXPERIENCE?
+                               ANC Future Center - Medical Placments Divison made the long journey to enrol for medicine agreeable by being efficient at getting the needful done promptly. Everyone is so very kind and patient. I had a lot of questions!! and each was answered with kindness and genuine interest.<p>
+    
+                               <a role="button" data-toggle="modal" data-target="#modalStudent3" class="btn btn-warning btn-lg">View More</a>
+                        </div>
+                    </div>
+                </div>           
+            </div> 
+            <div class="item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3"><img src="img/Students/Untitled-1-07.png" class="img-responsive" style="padding-top: 25px;"></div>
+                        <div class="col-md-9">
+                            <h2>Vedushan Kanagarajah</h2>
+                            <p class="mycss-content-justify">I stared down at the sheet I held. It had my name and the grades followed. Not what I had hoped for but something I thought I could exploit. My passion for a career was split and I was led into a dilemma. Do I try to pursue law or step into the medical field? I always knew medicine would be a challenge, a challenge I wanted to conquer. Thus started my journey towards choosing a competent university and acquiring admission</p> 
+                            
+                            <a role="button" data-toggle="modal" data-target="#modalStudent4" class="btn btn-warning btn-lg">View More</a>
+
+                        </div>
+                    </div>
+                </div>           
+            </div> 
+        <!-- End Item -->
+        </div>
+        <!-- End Carousel Inner -->
+    </div>
+    <!-- End Carousel -->
+    <!-- Student Summary -->
+    <div id="portfolio" class="container-fluid  text-center slideanim bg-grey"> 
+
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" data-interval="10000">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active"> 
+                    <h4>"I had a lot of questions!! and each was answered with kindness and genuine interest..."<br><span>-: Vedushan Kanagarajah</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"I understood that continuing my education in a foreign nation would be the more viable alternative..."<br><span>-: Shafiya Nawaz</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"They told me everything that I needed to know..."<br><span>-: Shenali Kumarsairi</span></h4>
+                </div>
+
+                <div class="item"> 
+                    <h4>"I greatly appreciate their effort and wish to thank them for all the assistance..."<br><span>-: Vedushan Kanagarajah</span></h4>
+                </div>
+
+                <div class="item">
+                    <h4>"Impeccable support during the university application process and the visa process..."<br><span>-: Shenali Kumarsairi</span></h4>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>    
+    
+    
+    
+<!-- Our Services -->
+<div id="container-services" ></div>    
+<div class="container-fluid mycss-container-margin text-center">
+    <h2>OUR SERVICES</h2>
+    <br>
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <span class="logo-small"><i class="fa fa-user-md"  aria-hidden="true"></i></span>
+            <h4>University Admissions Advice</h4>
+            <p>By SLMC Registered Medical Doctors</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="logo-small"><i class="fa fa-plane"  aria-hidden="true"></i></span>
+            <h4>Ticketing</h4>
+            <p>Airline Ticket Reservations and Travel Planning</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="logo-small"><i class="fa fa-automobile"  aria-hidden="true"></i></span>
+            <h4>Transportation</h4>
+            <p> Airport Welcome and Transportation to Medical university</p>
+        </div>
+        </div>
+        <br><br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="logo-small"><i class="fa fa-home"  aria-hidden="true"></i></span>
+                <h4>Accommodation</h4>
+                <p> Student accommodation in university hostels and apartments</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="logo-small"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+                <h4>Medical Insurance</h4>
+                <p>Critical and Non Critical Illnesses</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="logo-small"><i class="fa fa-hospital-o"  aria-hidden="true"></i></span>
+                <h4 style="color:#303030;">Medical Tests</h4>
+                <p>By Leading Hospitals</p>
+            </div>
+        </div>
+        <br><br>
+        <div id="demo" class="collapse more-content">
+            <div class="row ">
+                <div class="col-sm-4">
+                    <span class="logo-small"><i class="fa fa-newspaper-o"  aria-hidden="true"></i></span>
+                    <h4>Documentation</h4>
+                    <p>Document Translations, Verification, Authorization and Attestation</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="logo-small"><i class="fa fa-handshake-o"  aria-hidden="true"></i></span>
+                    <h4>Orientation</h4>
+                    <p>University Orientation and Familiarization</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="logo-small"><i class="fa fa-group"  aria-hidden="true"></i></span>
+                    <h4 style="color:#303030;">Grade Report to Parents</h4>
+                    <p>Student Report Card Handling</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <span class="logo-small"><i class="fa fa-id-card-o"  aria-hidden="true"></i></span>
+                    <h4 style="color:#303030;">Visa</h4>
+                    <p>Visa Advice and Visa Processing </p>
+                </div>
+            </div>
+        </div>
+   
+        <button class="btn btn-lg btn-warning collapsed readmore" data-toggle="collapse" data-target="#demo">Show More <span class="glyphicon glyphicon-menu-down"></span></button>
+ </div>
+
+
+
+
+
+<!-- Find Us -->
+<div id="container-findus"></div>      
+<div  class="container-fluid bg-grey">
+    <br><br>
+    <h2 class="text-center">Try to Find Us!</h2>
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="text-center"><span class="glyphicon glyphicon-phone"></span> Hotline: <a href="tel:0771694942">0771694942</a>  | <a href="tel:0771694942">0770839034</a>
+            <p class="text-center"><span class="glyphicon glyphicon-envelope"></span> E-Mail: <a href="mailto:naushad@ancedu.com">naushad@ancedu.com</a></p>      
+            <p class="text-center"> Address: ANC Future Center - Medical Division, No 111 1/2 Maya Avenue, Colombo 06 <br>    
+            ANC Future Center, Queens Road, Colombo 03 <br>
+            ANC Education, R.A.D Mel Mawatha, Colombo 03</p>
+        </div>
+        <!-- Add Google Maps -->
+        <div style="width: 100%;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0855441621275!2d79.86871521416208!3d6.880354920822166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bcbb74f4341%3A0x2e495e849420a2cd!2sANC+FUTURE+CENTER+-+MEDICAL+PLACEMENTS+DIVISION!5e0!3m2!1sen!2slk!4v1514815480570" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+
+    
+<!-- FOOTER SECTION -->    
+<!-- Footer - Social -->    
+<footer>   
+    <ul class="social container-fluid">
+        <li><a href="https://www.facebook.com/pathestudymedicineanc/"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://plus.google.com/u/0/109648234870792164217"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://twitter.com/ANC_FC_Medical" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCtkqH5yeILZlPsg8dbeg6rg" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/anc_pathe_study_medicine"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+</footer>
+    
+<!-- Footer - Copyright -->
+<footer class="second container-fluid">
+    <p>&copy; ANC Education 2017</p>
+</footer>    
+    
+<!-- MODAL SECTION -->    
+<!-- Modal Submit Form -->
+<div class="container" id="modalSubmitForm" >
+    <div class="modal fade" id="modalSubmit" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                </div>
+                <div class="modal-body">
+                    <form id="regForm">
+                        
+                        <!-- One "tab" for each step in the form: -->
+                        <div class="tab">
+                            <h1 style="padding-bottom: 30px;">Step 1 </h1>
+                            Fullname :
+                            <p><input placeholder="e.g. Mark Anthony" oninput="this.className = ''" name="txtstudent_fullname"></p>
+                        </div>
+                        <div class="tab">
+                            <h1 style="padding-bottom: 30px;">Step 2 </h1>
+                            Email :
+                            <p><input placeholder="e.g. example@gmail.com" oninput="this.className = ''" name="phone"></p>
+                        </div>
+                        <div class="tab">
+                            <h1 style="padding-bottom: 30px;">Step 3 </h1>
+                            Mobile Number :
+                            <p><input placeholder="e.g. 0771234567" oninput="this.className = ''" name="txtstudent_mobile"></p>
+                        </div>
+                        <div class="tab">
+                            <h1 style="padding-bottom: 30px;">Almost Done! </h1>
+                            <p class="mycss-content-justify">We just sent you an SMS with a six digit code. Enter it to verify you phone. Please note that SMS delivery can take a minute or more.</p>
+                            
+                            <p>Didn't recieve an SMS? <a href="#">Try again</a></p>
+                            <p><input placeholder="e.g. XXXXXX" oninput="this.className = ''" name="txtstudent_mobile_code"></p>
+                        </div>
+                        
+                      
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px;">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">       
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+        
+<!-- Modal Student 1 -->
+<div class="container" >
+    <div class="modal fade" id="modalStudent1" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Shenali Kumarsairi</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Students/350x250-01.png" class="img-responsive" style="padding-top: 25px;">
+                    <br>
+                    <p class="mycss-content-justify">Musaeus College – Mathematics World Prize, 2016. Medicine is the only profession that allows me to simultaneously help people while pushing my mental limits. It tests the limits of human compassion, memory, physical stamina, and resilience. And it is a nod back to the exact feelings I had as that five year old kid who wanted to become a doctor.Thanks to ANC-PATHE, I opened my eyes to choices I have out there to obtain a degree in medicine. They told me everything that I needed to know about the degree and the university. I wouldn’t have applied to MMMC if it was not for ANC-PATHE. Now that I study here, I can vouch for all the information I received form ANC-PATHE. They are very accurate. ANC also helped me contact the university and relevant officials. Since I lived in Galle, it was difficult for me to come to Colombo to meet the staff or to fill documents. When I had queries, I only had to give ANC one call - and they took necessary measures to get in touch with the university without any delay. ANC kept proper liaisons between me and the university - and responded in real time. They also extended me impeccable support during the university application process and the visa process. </p>
+                    
+                    
+
+                </div>
+                <div class="modal-footer">
+                            
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+    
+<!-- Modal Student 2 -->
+<div class="container" >
+    <div class="modal fade" id="modalStudent2" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Methni Kularatne</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Students/350x250-03.png" class="img-responsive" style="padding-top: 25px;">
+                    <br>
+                    <p class="mycss-content-justify">Medicine is the only profession that allows me to simultaneously help people while pushing my mental limits. It tests the limits of human compassion, memory, physical stamina, and resilience. And it is a nod back to the exact feelings I had as that five year old kid who wanted to become a doctor. HOW WERE YOU REFFERED TO PATHE? My first contact point for ANC Future Center - Medical Placments Divison was the articles on the newspapers. It was then that I decided to make a visit and rest as they say ‘’ is history’’.</p>
+
+                </div>
+                <div class="modal-footer">
+                            
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+    
+<!-- Modal Student 3 -->
+<div class="container" >
+    <div class="modal fade" id="modalStudent3" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Shafiya Nawaz</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Students/350x250-05.png" class="img-responsive" style="padding-top: 25px;">
+                    <br>
+                    <p class="mycss-content-justify">I stared down at the sheet I held. It had my name and the grades followed. Not what I had hoped for but something I thought I could exploit. My passion for a career was split and I was led into a dilemma. Do I try to pursue law or step into the medical field? I always knew medicine would be a challenge, a challenge I wanted to conquer. Thus started my journey towards choosing a competent university and acquiring admission</p> <p>My search for a university was widespread. Ranging from Latvia and Belarus to Australia. The competitive nature of the medical field and the difficulty to attain admission to a medical school is common knowledge. Keeping this in mind I had to traverse carefully and cleverly. It was then that Mr. P. Saravanan who serves as a Director/CFO at ANC suggested Pathe Study Medicine as an option to prospect a good university to pursue my tertiary education. I wanted to practice medicine in Sri Lanka but was also aware of the vibe in Sri Lanka with regards to Private Medical Colleges. Having completed my London A/Levels, I understood that continuing my education in a foreign nation would be the more viable alternative.<p>
+
+                </div>
+                <div class="modal-footer">
+                            
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+    
+<!-- Modal Student 4 -->
+<div class="container" >
+    <div class="modal fade" id="modalStudent4" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Vedushan Kanagarajah</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Students/Untitled-1-07.png" class="img-responsive" style="padding-top: 25px;">
+                    <br>
+                    <p class="mycss-content-justify">WHAT IS THE SIGNIFICANT FACTOR THAT MADE ANC Future Center - Medical Placments Divison A PLEASANT EXPERIENCE?
+                    ANC Future Center - Medical Placments Divison made the long journey to enrol for medicine agreeable by being efficient at getting the needful done promptly. Everyone is so very kind and patient. I had a lot of questions!! and each was answered with kindness and genuine interest. I greatly appreciate their effort and wish to thank them for all the assistance.<p>
+                                
+                    <p class="mycss-content-justify">FUTURE ASPIRATIONS?
+                     I am ecstatic for having the opportunity to graduate from a prestigious institution and hope not only to benefit from it academically but also to enrich myself with all it has to offer. Upon graduation I intend to serve the local community and work tirelessly delivering what a doctor ought to.</p>
+
+                </div>
+                <div class="modal-footer">
+                            
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>  
+    
+    
+    
+      
+<!-- Load scripts. -->
+    <script type="text/javascript" src="angularJS/angular-1.3.8.min.js"></script>
+    <script type="text/javascript" src="angularJS/angular-animate-1.3.8.min.js"></script>
+    <script type="text/javascript" src="js/readMoreLess.js"></script>
+    <script type="text/javascript" src="js/multiStep.js"></script>
+    <script type="text/javascript" src="js/goTop.js"></script>
+    <script type="text/javascript" src="js/preLoader.js"></script>
     
 </body>
 </html>
