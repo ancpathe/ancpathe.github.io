@@ -7,21 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="css/font/familyMontserrat.css" rel="stylesheet" type="text/css">
+    <link href="css/font/familyLato.css" rel="stylesheet" type="text/css">
+    <link href="css/font/familyRaleway.css" rel="stylesheet">
     
     
     <!-- Global use -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/flipclock.css"> 
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/flipclock.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
     
-    
-    
+
     <!-- Style -->
     <link rel="stylesheet" href="css/home/style.css"> 
   
@@ -152,31 +151,6 @@
                 font-size: 14px; 
             }    
     </style>
-    
-    
-    <script type='text/javascript'
-  src='js/timer.js'></script>
-<script type='text/javascript'
-  src="js/flipclock.js"></script>
-<link rel="stylesheet" type="text/css"
-  href="css/flipclock.css">
-<script type='text/javascript'>
-$(window).load(function(){
-$(document).ready(function(){
-    var date = new Date(2018, 1, 7, 0,0,0,0);
-    var today = new Date();
-    var dif = date.getTime() - today.getTime();
-    var timeLeft = Math.abs(dif/100)/60;
-    var clock = $('.clock').FlipClock({
-        autoStart: false,
-        clockFace: 'DailyCounter',
-        countdown: true
-    });
-    clock.setTime(timeLeft);
-    clock.start();   
-});
-});
-</script>
     
     
 </head>
@@ -311,7 +285,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
         <div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#myCarousel"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="#myCarousel"> Home</a></li>
                     <li><a href="#container-about">About Us</a></li>
                     <li><a data-toggle="modal" data-target="#modalSubmit" role="button">Apply Now</a></li>
                     <li><a href="#container-services">Our Services</a></li>
