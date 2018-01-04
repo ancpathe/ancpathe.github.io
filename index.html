@@ -24,8 +24,7 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="css/home/style.css"> 
-  ]
-    
+  
     
     
     <style>
@@ -153,6 +152,33 @@
                 font-size: 14px; 
             }    
     </style>
+    
+    
+    <script type='text/javascript'
+  src='js/timer.js'></script>
+<script type='text/javascript'
+  src="js/flipclock.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="css/flipclock.css">
+<script type='text/javascript'>
+$(window).load(function(){
+$(document).ready(function(){
+    var date = new Date(2018, 1, 7, 0,0,0,0);
+    var today = new Date();
+    var dif = date.getTime() - today.getTime();
+    var timeLeft = Math.abs(dif/100)/60;
+    var clock = $('.clock').FlipClock({
+        autoStart: false,
+        clockFace: 'DailyCounter',
+        countdown: true
+    });
+    clock.setTime(timeLeft);
+    clock.start();   
+});
+});
+</script>
+    
+    
 </head>
 <!-- Body -->    
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" ng-controller="AppController">
@@ -266,7 +292,7 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
 </div>
 <!-- END: App-Loading Screen. -->    
     
-    
+
     
     
     
@@ -295,6 +321,11 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
         </div>
     </div>
 </nav>
+    
+    
+    
+    
+    
 
 <!-- Carousel Main -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 20px;">
@@ -351,9 +382,9 @@ HACKY CODE WARNING: I'm putting Style block inside directive so that it
 <div  class="container-fluid mycss-container-margin ">
     <div class="row">
         <div class="col-sm-6">
-            <h2 style="padding: 0px 15px;">MELAKA MANIPAL MEDICAL COLLEGE - MANIPAL UNIVERSITY</h2>
-            <p class="mycss-content-justify" style="padding: 1px 15px;">MMMC’s medicine course provides you with a comprehensive understanding of the practice of medicine. There is an emphasis on the early development of clinical, communication and procedural skills, diagnosis and management of chronic diseases, and multidisciplinary teamwork, as well as an emphasis on rural and regional medicine.</p>
-            <a role="button" data-toggle="modal" data-target="#modalSubmit" class="btn btn-warning btn-lg" style="margin: 0px 15px">For More Information</a>
+            <h2>MELAKA MANIPAL MEDICAL COLLEGE - MANIPAL UNIVERSITY</h2>
+            <p class="mycss-content-justify">MMMC’s medicine course provides you with a comprehensive understanding of the practice of medicine. There is an emphasis on the early development of clinical, communication and procedural skills, diagnosis and management of chronic diseases, and multidisciplinary teamwork, as well as an emphasis on rural and regional medicine.</p>
+            <a role="button" data-toggle="modal" data-target="#modalSubmit" class="btn btn-warning btn-lg">For More Information</a>
         </div>
         <div class="col-sm-6">
             <div  class="embed-responsive embed-responsive-16by9">
